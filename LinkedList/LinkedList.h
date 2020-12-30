@@ -22,4 +22,8 @@ void  SLL_RemoveNode(Node** Head, Node* Remove);
 Node* SLL_GetNodeAt(Node* Head, int Location);
 int   SLL_GetNodeCount(Node* Head);
 
+/* Vitamin Quiz*/
+void SLL_InsertBefore(Node** Head, Node* Current, Node* NewHead);
+void SLL_DestroyAllNodes(Node** List);
+
 #endif
