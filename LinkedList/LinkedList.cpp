@@ -40,7 +40,7 @@ void SLL_AppendNode(Node** Head, Node* NewNode)
         // Loop문 수행시 Tail은 링크드 리스트의 마지막 노드를 가리키게됨 
         Tail->NextNode = NewNode;
         printf("New Node Inserted               : NewNode's Data = %d \n", NewNode->Data);
-            
+             
     }
 }
 

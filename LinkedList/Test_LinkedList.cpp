@@ -83,6 +83,7 @@ int main(void)
         {
             SLL_RemoveNode(&List, Current);
             SLL_DestroyNode(Current);
+             
         }
     }*/
 
