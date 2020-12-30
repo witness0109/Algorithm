@@ -80,10 +80,8 @@ $RECYCLE.BIN/
 #
 /.DS_Store
 *.vs/
-LinkedList/
 #
 *.tlog
-*.link.read.1.tlog
 *.obj
 *.lastbuildsta
 *.pdb
