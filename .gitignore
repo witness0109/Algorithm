@@ -92,7 +92,7 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/windows,eclipse,java,maven
 /.DS_Store
 *.vs/
-x64/
+*.x64/
 *.sln
 *.vcxproj
 *.filters
