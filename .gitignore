@@ -83,6 +83,7 @@ $RECYCLE.BIN/
 LinkedList/
 #
 *.tlog
+*.link.read.1.tlog
 *.obj
 *.lastbuildsta
 *.pdb
