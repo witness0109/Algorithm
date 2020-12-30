@@ -77,10 +77,11 @@ $RECYCLE.BIN/
 *.msp
 # Windows shortcuts
 *.lnk
-# End of https://www.gitignore.io/api/windows,eclipse,java,maven
+#
 /.DS_Store
 *.vs/
-
+LinkedList/
+#
 *.tlog
 *.obj
 *.lastbuildsta
@@ -89,7 +90,7 @@ $RECYCLE.BIN/
 *.ilk
 *.recipe
 *.exe
-
+#
 *.sln
 *.vcxproj
 *.filters
