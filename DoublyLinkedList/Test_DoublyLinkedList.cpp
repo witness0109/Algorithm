@@ -17,18 +17,23 @@ int main(void)
 
     /*  리스트 출력 */
     Count = DLL_GetNodeCount(List);
+    //printf("%d\n", Count);
     for (i = 0; i < Count; i++)
     {
         Current = DLL_GetNodeAt(List, i);
         printf("List[%d] : %d\n", i, Current->Data);
     }
 
+    /* 리스트 첫번째 헤드 삽입 */
+    NewNode = DLL_CreateNode(-1);
+    DLL_InsertNewHead(&List, NewNode);
+ 
     /*  리스트의 세번째 칸 뒤에 노드 삽입 */
     printf("\nInserting 3000 After [2]...\n\n");
 
     Current = DLL_GetNodeAt(List, 2);
     NewNode = DLL_CreateNode(3000);
-    DLL_InsertAfter(Current, NewNode);
+    DLL_InsertBefore(&List, Current, NewNode);
 
     /*  리스트 출력 */
     Count = DLL_GetNodeCount(List);

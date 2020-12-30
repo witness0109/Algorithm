@@ -25,6 +25,7 @@ void DLL_AppendNode(Node** Head, Node* NewNode)
     if ((*Head) == NULL)
     {
         *Head = NewNode;
+        printf("New Node Inserted <HeadNode> : NewNode's Data = %d \n", NewNode->Data);
     }
     else
     {
@@ -37,7 +38,9 @@ void DLL_AppendNode(Node** Head, Node* NewNode)
 
         Tail->NextNode = NewNode;
         NewNode->PrevNode = Tail; /*  기존의 테일을 새로운 테일의 PrevNode가 가리킨다. */
+        printf("New Node Inserted            : NewNode's Data = %d \n", NewNode->Data);
     }
+    
 }
 
 /*  노드 삽입 */
@@ -108,6 +111,12 @@ int DLL_GetNodeCount(Node* Head)
     return Count;
 }
 
+/* 노드 역순 */
+void PrintReverse(Node* Head)
+{
+
+}
+
 void PrintNode(Node* _Node)
 {
     if (_Node->PrevNode == NULL)
@@ -121,4 +130,51 @@ void PrintNode(Node* _Node)
         printf("Next: NULL\n");
     else
         printf("Next: %d\n", _Node->NextNode->Data);
+}
+
+
+void DLL_InsertBefore(Node** Head, Node* Current ,Node* NewHead)
+{
+    printf("New DLL_InsertBefore Start\n");
+    printf("=========================매개변수===================\n");
+    printf("Head: %d\n", *Head);
+    printf("Current: %d\n", Current->Data);
+    printf("NewHead: %d\n", NewHead->Data);
+    printf("=========================매개변수===================\n");
+
+    printf("New Node Inserted            : NewHead's Data = %d \n", NewHead->Data);
+
+    Node* Temp_Cur = *Head;
+
+    printf("변경 전 Temp_Cur -> Data: %d\n", Temp_Cur->Data);
+
+    if (Temp_Cur != NULL && Temp_Cur->NextNode != Current)
+        Temp_Cur = Temp_Cur->NextNode;
+
+    printf("변경 후 Temp_Cur -> Data: %d\n", Temp_Cur->Data);
+
+    Temp_Cur->NextNode = NewHead;
+    NewHead->NextNode = Current;
+
+    printf(" Temp_Cur->Data: %d\n", Temp_Cur->Data);
+    printf(" NewHead->Data: %d\n", NewHead->Data);
+}
+
+/* 헤드 삽입 */
+void  DLL_InsertNewHead(Node** Head, Node* NewHead)
+{
+    if ((*Head) == NULL) // 헤드가 존재하지 않을시 새로운 노드가 Head
+    {
+        *Head = NewHead;
+        printf("New Head Inserted <Head Node> : NewNode's Data = %d \n", NewHead->Data);
+    }
+    else
+    {
+        NewHead->NextNode = (*Head); // 새로운 노드의 NextNode가 기존의 Head가 되고
+
+        // SLL->DLL로 변경하면서 새로 생긴 부분 
+        (*Head)->PrevNode = NewHead;
+        (*Head) = NewHead;
+        printf("New Head Inserted <Head Node> : NewNode's Data = %d \n", NewHead->Data);
+    }
 }
