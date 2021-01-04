@@ -80,8 +80,5 @@ dkms.conf
 x64/
 */64/
 .vs/
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
 
 # End of https://www.toptal.com/developers/gitignore/api/c,c++
