@@ -79,7 +79,6 @@ dkms.conf
 # Executables
 x64/
 */64/
-*.sln
 .vs/
 *.vcxproj
 *.vcxproj.filters
