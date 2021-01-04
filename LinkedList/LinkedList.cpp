@@ -153,3 +153,14 @@ int SLL_GetNodeCount(Node* Head)
 
     return Count;
 }
+
+/* 거꾸로 뽑아보자 */
+void SLL_PrintReverse(Node* Head)
+{
+    printf("SLL_PRINTREVERSE Start\n\n");
+
+
+
+
+    printf("SLL_PRINTREVERSE End\n");
+}
